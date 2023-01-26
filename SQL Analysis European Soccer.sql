@@ -115,7 +115,6 @@ GROUP BY 1,2,3
 -- Use row_number and partition by to assign league table position for every team in each season. Row_number instead of rank in order to avoid two teams being given same position.
 -- Calculate points for teams (3 for a win, 1 for a draw) and draws. 
 -- Output query result into new table to perform further data analysis
-DROP TABLE IF EXISTS league_table;
 CREATE TABLE IF NOT EXISTS league_table (
 SELECT 
 	w.season
