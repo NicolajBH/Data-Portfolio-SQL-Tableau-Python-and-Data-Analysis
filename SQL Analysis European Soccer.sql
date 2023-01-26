@@ -142,7 +142,10 @@ JOIN goals_conceded gc
 	ON w.winning_team = gc.team_id AND w.season = gc.season
 ORDER BY w.season, league_id, ((w.wins*3) + (gs.games_played - w.wins - l.losses)) DESC, gs.goals_scored - gc.goals_conceded DESC
 );
-
+DROP TEMPORARY TABLE wins;
+DROP TEMPORARY TABLE losses;
+DROP TEMPORARY TABLE goals_scored;
+DROP TEMPORARY TABLE goals_conceded;
 
 -- Premier League Analysis 
 
