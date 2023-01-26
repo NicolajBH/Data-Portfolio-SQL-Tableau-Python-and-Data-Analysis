@@ -2,6 +2,7 @@
 European Soccer Database Data Exploration
 
 Skills used: Joins, CTEs, Temp Tables, Window Functions, Aggregate Function, Procedures
+Dataset downloaded from: https://www.kaggle.com/datasets/hugomathien/soccer
 
 */
 
