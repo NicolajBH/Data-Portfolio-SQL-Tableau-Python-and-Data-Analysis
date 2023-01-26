@@ -165,10 +165,24 @@ SELECT AVG(Pts) AS AvgPointsWinner
 FROM league_table
 WHERE position = 1 AND league_id = 1729;
 
+-- Number of times finished in top 4
+SELECT team,COUNT(*) AS Top4Finishes
+FROM league_table
+WHERE position <= 4 AND league_id = 1729
+GROUP BY 1
+ORDER BY 2 DESC;
+
 -- Average points for 4th place (champions league football) 
 SELECT AVG(Pts) AS AvgPointsTop4 
 FROM league_table
 WHERE position = 4 AND league_id = 1729;
+
+-- Number of times relegated
+SELECT team, COUNT(*)
+FROM league_table
+WHERE position >= 18 AND league_id = 1729
+GROUP BY 1
+ORDER BY 2 DESC;
 
 -- Average points for 17th place (not in bottom 3, i.e. not relegated)
 SELECT AVG(Pts) AS AvgPointsRelegation
